@@ -53,7 +53,7 @@ cd  apache-iotdb-{version}-all-bin
 
 #### Environment Script Configuration
 
-- ./conf/confignode env.sh (./conf/confignode env.bat) configuration
+- ./conf/confignode-env.sh（./conf/confignode-env.bat） configuration
 
 | **Configuration** |                       **Description**                        | **Default** |                    **Recommended value**                     |                Note                 |
 | :---------------: | :----------------------------------------------------------: | :---------: | :----------------------------------------------------------: | :---------------------------------: |
@@ -77,7 +77,7 @@ Open the general configuration file (./conf/iotdb-common. properties file) and s
 
 #### ConfigNode Configuration
 
-Open the ConfigNode configuration file (./conf/iotdb-configure. properties file) and set the following parameters:
+Open the ConfigNode configuration file (./conf/iotdb-confignode. properties file) and set the following parameters:
 
 |  **Configuration**  |                       **Description**                        |   **Default**   |                    **Recommended value**                     |                   Note                   |
 | :-----------------: | :----------------------------------------------------------: | :-------------: | :----------------------------------------------------------: | :--------------------------------------: |

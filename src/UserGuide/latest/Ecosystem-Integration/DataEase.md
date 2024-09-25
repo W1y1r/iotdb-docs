@@ -24,7 +24,7 @@
 
 1. Introduction to DataEase
 
-    DataEase is an open-source data visualization and analysis tool that provides a drag and drop interface, allowing users to easily create charts and dashboards. It supports MySQL SQL Server、Hive、ClickHouse、 Multiple data sources such as Dameng can be integrated into other applications. Can help users quickly gain insights into data and make decisions.For more detailed information, please refer to[DataEase official website](https://www.fit2cloud.com/dataease/index.html)
+    DataEase is an open-source data visualization and analysis tool that provides a drag and drop interface, allowing users to easily create charts and dashboards. It supports multiple data sources such as MySQL, SQL Server, Hive, ClickHouse, DM, and can be integrated into other applications. Can help users quickly gain insights into data and make decisions. For more detailed information, please refer to [DataEase official website](https://www.fit2cloud.com/dataease/index.html)
 
     <div style="text-align: center;">
       <img src="https://alioss.timecho.com/docs/img/DataEase2.png" alt="" style="width: 60%;"/>
@@ -48,21 +48,21 @@
 
 ## Installation Steps
 
-Step 1: Please contact the business to obtain the compressed file and unzip the installation package（ iotdb-api-source-1.0.0.zip ）
+Step 1: Please contact Timecho to obtain the file and unzip the installation package (iotdb-api-source-1.0.0.zip)
 
-Step 2: After decompression,Modify the configuration file`application.properties` in the `config` folder
+Step 2: After extracting the files, modify the `application.properties` configuration file in the `config` folder.
 
-- port`server.port` can be modified as needed
-- `iotdb.nodeUrls` need to configure the address and port of the IoTDB instance to be connected
-- `iotdb.user` need to configure the username for IoTDB
-- `iotdb.password` password for IoTDB needs to be configured
+- `server.port` can be modified as needed.
+- `iotdb.nodeUrls` should be configured with the address and port of the IoTDB instance to be connected.
+- `iotdb.user` should be set to the IoTDB username.
+- `iotdb.password` should be set to the IoTDB password. 
 
 ```Properties
-# Port to start IoTDB API Source listening
+# Port on which the IoTDB API Source listens
 server.port=8097
-# The instance address of IoTDB,multiple nodeUrls use; division
+# IoTDB instance addresses, multiple nodeUrls separated by ;
 iotdb.nodeUrls=127.0.0.1:6667
-# IoTDB user name
+# IoTDB username
 iotdb.user=root
 # IoTDB password
 iotdb.password=root
@@ -70,7 +70,7 @@ iotdb.password=root
 
 Step 3: Start up  DataEase-IoTDB Connector
 
-- Front end startup
+- Foreground start
 
 ```Shell
 ./sbin/start.sh
@@ -85,7 +85,7 @@ Step 3: Start up  DataEase-IoTDB Connector
 Step 4: After startup, you can check whether the startup was successful through the log.
 
 ```Shell
- lsof -i:8097  // Starting the IoTDB API Source listening port in config
+ lsof -i:8097  // The port configured in the file where the IoTDB API Source listens
 ```
 
 ## Instructions
@@ -99,22 +99,24 @@ Step 4: After startup, you can check whether the startup was successful through 
 
 ### Configure data source
 
-1. Jump in the navigation bar【Data Source】interface
+1. Navigate to【Data Source】.
 <div style="text-align: center;">
   <img src="https://alioss.timecho.com/docs/img/DataEase-English4.png" alt="" style="width: 70%;"/>
 </div>
 
-2. Click on the top left corner 【 + 】，slide to the bottom，choice【API】Data Source
+2. Click on the 【+】 on the top left corner, choose 【API】 at the bottom as Data Source.
 <div style="text-align: center;">
   <img src="https://alioss.timecho.com/docs/img/DataEase-English5.png" alt="" style="width: 70%;"/>
 </div>
 
-3. New API Data Source，set the basic information on your own【Display name】，click on the data table location【+ Add】
+3. Set the 【Display name】, and add the API Data Source.
+
 <div style="text-align: center;">
   <img src="https://alioss.timecho.com/docs/img/DataEase-English6.png" alt="" style="width: 70%;"/>
 </div>
 
-4. Enter custom in the data table name field【Name】，request type selection `Post`，address filling `http://[IoTDB API Source]:[port]/getData`，If operating locally and using the default port，address filling`http://127.0.0.1:8097/getData`
+4. Set the name of the Dataset Table, select `Post` as the Request Type, fill in the address with `http://[IoTDB API Source]:[port]/getData`. If operating on the local machine and using the default port, the address should be set to `http://127.0.0.1:8097/getData`.
+
 <div style="text-align: center;">
   <img src="https://alioss.timecho.com/docs/img/DataEase-English7.png" alt="" style="width: 70%;"/>
 </div>

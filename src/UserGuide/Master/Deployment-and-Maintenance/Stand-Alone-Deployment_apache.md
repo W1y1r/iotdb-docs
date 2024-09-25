@@ -53,7 +53,7 @@ cd  apache-iotdb-{version}-all-bin
 
 #### Environment Script Configuration
 
-- ./conf/confignode env.sh (./conf/confignode env.bat) configuration
+- ./conf/confignode-env.sh（./conf/confignode-env.bat） configuration
 
 | **Configuration** |                       **Description**                        | **Default** |                    **Recommended value**                     |                Note                 |
 | :---------------: | :----------------------------------------------------------: | :---------: | :----------------------------------------------------------: | :---------------------------------: |
